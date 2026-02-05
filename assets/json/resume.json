@@ -21,7 +21,7 @@
       "location": "Stuttgart, Germany",
       "startDate": "2025-05-12",
       "endDate": "2025-11-11",
-      "summary": "• I have worked on my thesis on topic of “Consistency-aware Video Generation: Dynamic, Semantic, and Geometric Constraints for Improved Temporal Coherence”. In the thesis, I enhance temporal consistency of video generation (VG) in an end-to-end multimodal manner. I propose a novel framework for fine-tuning pretrained VG models (specifically Stable Video Diffusion), while keeping the inference control-free. The framework enforces dynamic, semantic, and depth consistency using a set of losses. These losses compare outputs of off-the-shelf object detection (DN-DETR), feature extraction (DINO), and depth estimation models between ground-truth and generated videos. For this work, I have designed distributed training and evaluation pipelines deployed on GCP with Flyte, using support of accelerate library.
+      "summary": "• I have worked on my thesis on topic of Consistency-aware Video Generation: Dynamic, Semantic, and Geometric Constraints for Improved Temporal Coherence. In the thesis, I enhance temporal consistency of video generation (VG) in an end-to-end multimodal manner. I propose a novel framework for fine-tuning pretrained VG models (specifically Stable Video Diffusion), while keeping the inference control-free. The framework enforces dynamic, semantic, and depth consistency using a set of losses. These losses compare outputs of off-the-shelf object detection (DN-DETR), feature extraction (DINO), and depth estimation models between ground-truth and generated videos. For this work, I have designed distributed training and evaluation pipelines deployed on GCP with Flyte, using support of accelerate library.
       • Additionally, I have contributed to a scientific publication accepted to the IEEE IV 2026 conference, based on this thesis, conducting all the experiments and contributing to the manuscript preparation."
     },
     {
@@ -41,7 +41,7 @@
       "location": "Erlangen, Germany",
       "startDate": "2024-06-01",
       "endDate": "2024-11-14",
-      "summary": "Implemented a new initialization algorithm for Bilinear Expectation Propagation (EP) algorithm, part of a "Cell-Free 6G" Information Theory Project. New initialization lead to accuracy increase of the EP algorithm. Experiments were run on a high-computing cluster.Implemented a new initialization algorithm for Bilinear Expectation Propagation (EP) algorithm, part of a "Cell-Free 6G" Information Theory Project. New initialization lead to accuracy increase of the EP algorithm. Experiments were run on a high-computing cluster."
+      "summary": "Implemented a new initialization algorithm for Bilinear Expectation Propagation (EP) algorithm, part of a Cell-Free 6G Information Theory Project. New initialization lead to accuracy increase of the EP algorithm. Experiments were run on a high-computing cluster.Implemented a new initialization algorithm for Bilinear Expectation Propagation (EP) algorithm, part of a "Cell-Free 6G" Information Theory Project. New initialization lead to accuracy increase of the EP algorithm. Experiments were run on a high-computing cluster."
     },
     {
       "name": "TTTech Auto",
@@ -49,7 +49,7 @@
       "location": "Belgrade, Serbia",
       "startDate": "2023-03-01",
       "endDate": "2023-08-31",
-      "summary": "Completed my bachelor thesis on the topic of "Real-time Traffic Light Detection in the CARLA Simulator". The work included usage of signal processing tools with at the time SOTA object detection model (YOLO) with real-time capabilities, and integrating it to CARLA simulator."
+      "summary": "Completed my bachelor thesis on the topic of Real-time Traffic Light Detection in the CARLA Simulator. The work included usage of signal processing tools with at the time SOTA object detection model (YOLO) with real-time capabilities, and integrating it to CARLA simulator."
     },
     {
       "name": "University of Belgrade, School of Electrical Engineering",
