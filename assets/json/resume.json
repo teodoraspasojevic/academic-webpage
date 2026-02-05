@@ -29,10 +29,7 @@
       "location": "Stuttgart, Germany",
       "startDate": "2024-11-15",
       "endDate": "2025-04-15",
-      "summary": "• During this research-driven internship, I have researched the fields of diﬀusion-based video generative and world models (WM) and conditioning mechanisms (ControlNet). This research contributed to a master’s thesis proposal.
-• I have experiments with models: Stable Video Diffusion (SVD), Vista WM, Cosmos WM and Ctrl-V (SVD with ControlNet).
-• Used infrastructure: Google’s cloud computing service (GCP) with Flyte and Weights&Biases support. I have developed a tutorial on GCP and workflow setup for GCP, now used by the team.
-• Participated and presented my work in team research sync meetings."
+      "summary": "• During this research-driven internship, I have researched the fields of diﬀusion-based video generative and world models (WM) and conditioning mechanisms (ControlNet). This research contributed to a master’s thesis proposal. \n • I have experiments with models: Stable Video Diffusion (SVD), Vista WM, Cosmos WM and Ctrl-V (SVD with ControlNet). \n • Used infrastructure: Google’s cloud computing service (GCP) with Flyte and Weights&Biases support. I have developed a tutorial on GCP and workflow setup for GCP, now used by the team. \n • Participated and presented my work in team research sync meetings."
     },
     {
       "name": "Friedrich-Alexander University Erlangen-Nuremberg",
@@ -79,10 +76,7 @@
       "startDate": "2023-10-01",
       "endDate": "2025-12-04",
       "score": "1.4",
-      "summary": "• Department: Electromobility-ACES with majors in AI, Autonomous Driving and Communication.
-• Scientific Project: Uncertainty Estimation for Video Generative models.
-• Minor Projects: Vision Transformer, LSTM, RNN implementation; Imitation Learning.
-• Courses: CV, RL, Advanced DL (including advanced concepts as Explainability, Uncertainty) etc."
+      "summary": "• Department: Electromobility-ACES with majors in AI, Autonomous Driving and Communication. \n • Scientific Project: Uncertainty Estimation for Video Generative models. \n • Minor Projects: Vision Transformer, LSTM, RNN implementation; Imitation Learning. \n • Courses: CV, RL, Advanced DL (including advanced concepts as Explainability, Uncertainty) etc."
     },
     {
       "institution": "University of Belgrade, School of Electrical Engineering",
@@ -92,8 +86,7 @@
       "startDate": "2019-10-01",
       "endDate": "2023-07-06",
       "score": "9.33/10.00 ()",
-      "summary": "Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing.Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing.
-Department: Signals and Systems"
+      "summary": "Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing.Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing.\n Department: Signals and Systems"
     }
   ],
   "scholarships": [
