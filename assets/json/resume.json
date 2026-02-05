@@ -1,115 +1,113 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Teodora Spasojevic",
+    "label": "M.Sc. with majors in Artificial Intelligence and Autonomous Driving",
     "image": "",
-    "email": "einstein@example.com",
-    "phone": "(912) 123-4567",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "spasojevic.teodora@gmail.com",
+    "phone": "(+49) 176-311-45-217",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "Stintzingstr. 29",
+      "postalCode": "90152",
+      "city": "Erlangen",
+      "countryCode": "Germany",
+      "region": "Bavaria"
     },
     "profiles": []
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Princeton University, NJ",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity", "Description 2."]
+      "name": "Mercedes-Benz AG, Autonomous Driving R&D Team",
+      "position": "Master's Thesis Student",
+      "location": "Stuttgart, Germany",
+      "startDate": "2025-05-12",
+      "endDate": "2025-11-11",
+      "summary": "• I have worked on my thesis on topic of “Consistency-aware Video Generation: Dynamic, Semantic, and Geometric Constraints for Improved Temporal Coherence”. In the thesis, I enhance temporal consistency of video generation (VG) in an end-to-end multimodal manner. I propose a novel framework for fine-tuning pretrained VG models (specifically Stable Video Diffusion), while keeping the inference control-free. The framework enforces dynamic, semantic, and depth consistency using a set of losses. These losses compare outputs of off-the-shelf object detection (DN-DETR), feature extraction (DINO), and depth estimation models between ground-truth and generated videos. For this work, I have designed distributed training and evaluation pipelines deployed on GCP with Flyte, using support of accelerate library.
+      • Additionally, I have contributed to a scientific publication accepted to the IEEE IV 2026 conference, based on this thesis, conducting all the experiments and contributing to the manuscript preparation."
     },
     {
-      "name": "California Institute of Technology",
-      "position": "Visiting Professor",
-      "location": "Pasadena, California, US",
-      "startDate": "1933-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": ["Description 1.", "Description 2."]
+      "name": "Mercedes-Benz AG, Autonomous Driving R&D Team",
+      "position": "Intern",
+      "location": "Stuttgart, Germany",
+      "startDate": "2024-11-15",
+      "endDate": "2025-04-15",
+      "summary": "• During this research-driven internship, I have researched the fields of diﬀusion-based video generative and world models (WM) and conditioning mechanisms (ControlNet). This research contributed to a master’s thesis proposal.
+• I have experiments with models: Stable Video Diffusion (SVD), Vista WM, Cosmos WM and Ctrl-V (SVD with ControlNet).
+• Used infrastructure: Google’s cloud computing service (GCP) with Flyte and Weights&Biases support. I have developed a tutorial on GCP and workflow setup for GCP, now used by the team.
+• Participated and presented my work in team research sync meetings."
     },
     {
-      "name": "Kaiser Wilhelm Institute for Physics",
-      "position": "Director",
-      "location": "Berlin, Germany",
-      "startDate": "1917-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": []
+      "name": "Friedrich-Alexander University Erlangen-Nuremberg",
+      "position": "Research Assistant",
+      "location": "Erlangen, Germany",
+      "startDate": "2024-06-01",
+      "endDate": "2024-11-14",
+      "summary": "Implemented a new initialization algorithm for Bilinear Expectation Propagation (EP) algorithm, part of a "Cell-Free 6G" Information Theory Project. New initialization lead to accuracy increase of the EP algorithm. Experiments were run on a high-computing cluster.Implemented a new initialization algorithm for Bilinear Expectation Propagation (EP) algorithm, part of a "Cell-Free 6G" Information Theory Project. New initialization lead to accuracy increase of the EP algorithm. Experiments were run on a high-computing cluster."
     },
     {
-      "name": "Karl-Ferdinand University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Prague, Czechoslovakia",
-      "startDate": "1911-01-01",
-      "endDate": "1917-01-01",
-      "summary": "",
-      "highlights": []
+      "name": "TTTech Auto",
+      "position": "Software Engineer Intern",
+      "location": "Belgrade, Serbia",
+      "startDate": "2023-03-01",
+      "endDate": "2023-08-31",
+      "summary": "Completed my bachelor thesis on the topic of "Real-time Traffic Light Detection in the CARLA Simulator". The work included usage of signal processing tools with at the time SOTA object detection model (YOLO) with real-time capabilities, and integrating it to CARLA simulator."
     },
     {
-      "name": "University of Zurich",
-      "position": "Associate Professor of Theoretical Physics",
-      "location": "Zurich, Switzerland",
-      "startDate": "1909-01-01",
-      "endDate": "1911-01-01",
-      "summary": "",
-      "highlights": []
+      "name": "University of Belgrade, School of Electrical Engineering",
+      "position": "Undergraduate Teaching Assistant",
+      "location": "Belgrade, Serbia",
+      "startDate": "2021-03-01",
+      "endDate": "2023-07-01",
+      "summary": "Undergraduate Teaching Assistant on courses of Signals and Systems and Automatic Control Systems, where I assisted in laboratory education and assessed students’ homework and lab performance."
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "SUETF (Student Organization)",
+      "location": "Belgrade, Serbia",
+      "position": "Student Mentor",
+      "startDate": "2021-10-01",
+      "endDate": "2022-10-01",
+      "summary": "Helping first-year undergraduate students excel academically and thrive in their educational journey through personalized guidance and support."
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Physics",
-      "studyType": "PhD",
-      "startDate": "1900-01-01",
-      "endDate": "1905-01-01",
-      "score": "",
-      "courses": ["Theory of Relativity"],
-      "highlights": ["Description 1.", "Description 2."]
+      "institution": "Friedrich-Alexander University Erlangen-Nuremberg",
+      "location": "Erlangen, Germany",
+      "url": "https://www.fau.de/",
+      "area": "Artificial Intelligence",
+      "studyType": "Master's",
+      "startDate": "2023-10-01",
+      "endDate": "2025-12-04",
+      "score": "1.4",
+      "summary": "• Department: Electromobility-ACES with majors in AI, Autonomous Driving and Communication.
+• Scientific Project: Uncertainty Estimation for Video Generative models.
+• Minor Projects: Vision Transformer, LSTM, RNN implementation; Imitation Learning.
+• Courses: CV, RL, Advanced DL (including advanced concepts as Explainability, Uncertainty) etc."
     },
     {
-      "institution": "Eidgenössische Technische Hochschule",
-      "location": "Zurich, Switzerland",
-      "area": "Physics",
-      "studyType": "Federal teaching diploma",
-      "startDate": "1896-01-01",
-      "endDate": "1900-01-01",
-      "score": "",
-      "courses": [],
-      "highlights": ["Description 1.", "Description 2."]
+      "institution": "University of Belgrade, School of Electrical Engineering",
+      "location": "Belgrade, Serbia",
+      "area": "Electrical Engineering and Computing",
+      "studyType": "Bachelor's",
+      "startDate": "2019-10-01",
+      "endDate": "2023-07-06",
+      "score": "9.33/10.00 ()",
+      "summary": "Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing.Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing.
+Department: Signals and Systems"
     }
   ],
-  "awards": [
+  "scholarships": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "BAYHOST Scholarship",
+      "date": "2024-10-01",
+      "awarder": "BAYHOST",
+      "url": "https://www.uni-regensburg.de/en/bayhost"
     },
     {
-      "title": "Max Planck Medal",
-      "date": "2029-01-01",
-      "awarder": "German Physical Society",
+      "title": "Scholarship for Exceptionally Gifted Students",
+      "date": "2021-10-01",
+      "awarder": "Ministry of Education, Science and Technological Development of Republic of Serbia",
       "summary": ""
     }
   ],
