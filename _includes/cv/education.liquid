@@ -1,23 +1,17 @@
 {% comment %}
   Unified education entry renderer for both RenderCV and JSONResume formats
+  Handles both:
+  - RenderCV: institution, area, studyType (or degree), start_date, end_date, location, courses, highlights
+  - JSONResume: institution, area, studyType, startDate, endDate, location, courses, highlights
 
-  Supported fields:
-  - Dates:
-    - RenderCV: start_date, end_date
-    - JSONResume: startDate, endDate
-  - Basic:
-    - institution, url, area, studyType (or degree), location, score
-  - Extra (custom, from your JSON):
-    - department, scientific_project, minor_projects, summary
-  - Lists:
-    - courses, highlights
+  Extra custom fields (from your JSON):
+  - department, scientific_project, minor_projects, summary, score
 {% endcomment %}
 
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for entry in entries %}
     <li class="list-group-item">
       <div class="row">
-        <!-- Left column: Date + Location -->
         <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
           {% capture start_date %}
             {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
@@ -27,9 +21,10 @@
           {% endcapture %}
 
           {% if start_date != '' %}
-            {% assign startYear = start_date | split: '-' | first %}
-            {% assign endYear = end_date | split: '-' | first | default: 'Present' %}
-            {% assign date = startYear | append: ' - ' | append: endYear %}
+            {% comment %} Extract year only from dates like "1933-01-01" or just use "1933" as is {% endcomment %}
+            {% assign startDate = start_date | split: '-' | first %}
+            {% assign endDate = end_date | split: '-' | first | default: 'Present' %}
+            {% assign date = startDate | append: ' - ' | append: endDate %}
           {% else %}
             {% assign date = null %}
           {% endif %}
@@ -45,7 +40,6 @@
                   {% endif %}
                 </td>
               </tr>
-
               {% capture location %}
                 {% if entry.location %}{{ entry.location }}{% endif %}
               {% endcapture %}
@@ -63,58 +57,60 @@
           </table>
         </div>
 
-        <!-- Right column: Institution (headline) + details -->
         <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
-          {% comment %} Institution as headline {% endcomment %}
-          {% if entry.institution %}
-            <h4 class="title font-weight-bold ml-1 ml-md-4 mb-1">
-              {% if entry.url %}
-                <a href="{{ entry.url }}" target="_blank" rel="noopener">{{ entry.institution }}</a>
-              {% else %}
-                {{ entry.institution }}
-              {% endif %}
-            </h4>
-          {% endif %}
-
-          {% comment %} Degree / study type + area + GPA {% endcomment %}
           {% capture study_type %}
             {% if entry.studyType %}{{ entry.studyType }}{% elsif entry.degree %}{{ entry.degree }}{% endif %}
           {% endcapture %}
 
-          {% if study_type != '' or entry.area or entry.score %}
-            <p class="ml-1 ml-md-4 mb-1" style="font-size: 0.95rem;">
-              {% if study_type != '' %}<strong>{{ study_type }}</strong>{% endif %}
-              {% if study_type != '' and entry.area %} — {% endif %}
-              {% if entry.area %}<em>{{ entry.area }}</em>{% endif %}
-              {% if entry.score %} · GPA: {{ entry.score }}{% endif %}
-            </p>
+          {% if entry.url %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">
+              <a href="{{ entry.url }}" target="_blank" rel="noopener">{{ study_type }}</a>
+            </h6>
+          {% elsif study_type != '' %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ study_type }}</h6>
           {% endif %}
 
-          {% comment %} Custom/extra fields from your JSON {% endcomment %}
+          {% if entry.institution %}
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.institution }}</h6>
+          {% endif %}
+
+          {% if entry.area %}
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ entry.area }}</h6>
+          {% endif %}
+
+          {%- comment -%} --- Added fields (keeps original layout) --- {%- endcomment -%}
+          {% if entry.score %}
+            <p class="ml-1 ml-md-4 mb-1" style="font-size: 0.9rem;"><strong>GPA:</strong> {{ entry.score }}</p>
+          {% endif %}
+
           {% if entry.department %}
-            <p class="ml-1 ml-md-4 mb-1"><strong>Program/Department:</strong> {{ entry.department }}</p>
+            <p class="ml-1 ml-md-4 mb-1" style="font-size: 0.9rem;"><strong>Department/Program:</strong> {{ entry.department }}</p>
           {% endif %}
 
           {% if entry.scientific_project %}
-            <p class="ml-1 ml-md-4 mb-1"><strong>Scientific project:</strong> {{ entry.scientific_project }}</p>
+            <p class="ml-1 ml-md-4 mb-1" style="font-size: 0.9rem;"><strong>Scientific project:</strong> {{ entry.scientific_project }}</p>
           {% endif %}
 
           {% if entry.minor_projects %}
-            <p class="ml-1 ml-md-4 mb-1"><strong>Additional projects:</strong> {{ entry.minor_projects }}</p>
+            <p class="ml-1 ml-md-4 mb-1" style="font-size: 0.9rem;"><strong>Minor projects:</strong> {{ entry.minor_projects }}</p>
           {% endif %}
 
           {% if entry.summary %}
-            <p class="ml-1 ml-md-4 mb-1">{{ entry.summary }}</p>
+            <p class="ml-1 ml-md-4 mb-1" style="font-size: 0.9rem;">{{ entry.summary }}</p>
           {% endif %}
+          {%- comment -%} --- End added fields --- {%- endcomment -%}
 
-          {% comment %} Courses + highlights (standard support) {% endcomment %}
           {% if entry.courses or entry.highlights %}
-            <ul class="items ml-1 ml-md-4">
+            <ul class="items">
               {% for item in entry.courses %}
-                <li><span class="item">{{ item }}</span></li>
+                <li>
+                  <span class="item">{{ item }}</span>
+                </li>
               {% endfor %}
               {% for item in entry.highlights %}
-                <li><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+                <li>
+                  <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+                </li>
               {% endfor %}
             </ul>
           {% endif %}
