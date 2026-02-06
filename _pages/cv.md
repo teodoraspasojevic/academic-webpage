@@ -5,7 +5,7 @@ title: CV
 nav: true
 nav_order: 5
 cv_pdf: /assets/pdf/CV.pdf # you can also use external links here
-cv_format: rendercv # jsonresume: rendercv, jsonresume
+cv_format: jsonresume # jsonresume: rendercv, jsonresume
 toc:
   sidebar: left
 ---
