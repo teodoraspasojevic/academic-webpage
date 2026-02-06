@@ -1,88 +1,121 @@
 {% comment %}
-  Card-style education renderer (closer to the 2nd screenshot).
-  Works for JSONResume + RenderCV fields.
-  Optional: entry.logo (path to image in assets/img)
+  Education renderer with controlled logo size.
+  Works with JSONResume + RenderCV.
 {% endcomment %}
 
-<ul class="list-unstyled m-0 p-0">
+<ul class="card-text font-weight-light list-group list-group-flush">
   {% for entry in entries %}
-    {% capture start_date %}
-      {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
-    {% endcapture %}
-    {% capture end_date %}
-      {% if entry.end_date %}{{ entry.end_date }}{% elsif entry.endDate %}{{ entry.endDate }}{% endif %}
-    {% endcapture %}
+    <li class="list-group-item">
+      <div class="row">
 
-    {% assign startYear = start_date | split: '-' | first %}
-    {% assign endYear = end_date | split: '-' | first | default: 'Present' %}
-    {% if startYear != '' %}
-      {% assign date = startYear | append: ' – ' | append: endYear %}
-    {% else %}
-      {% assign date = '' %}
-    {% endif %}
+        <!-- LEFT COLUMN: Date + Location + Logo -->
+        <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
 
-    {% capture study_type %}
-      {% if entry.studyType %}{{ entry.studyType }}{% elsif entry.degree %}{{ entry.degree }}{% endif %}
-    {% endcapture %}
+          {% capture start_date %}
+            {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
+          {% endcapture %}
+          {% capture end_date %}
+            {% if entry.end_date %}{{ entry.end_date }}{% elsif entry.endDate %}{{ entry.endDate }}{% endif %}
+          {% endcapture %}
 
-    <li class="cv-card">
-      <div class="cv-card-row">
-        {% if entry.logo %}
-          <div class="cv-card-logo">
-            <img src="{{ entry.logo | relative_url }}" alt="{{ entry.institution }} logo" />
-          </div>
-        {% endif %}
+          {% if start_date != '' %}
+            {% assign startYear = start_date | split: '-' | first %}
+            {% assign endYear = end_date | split: '-' | first | default: 'Present' %}
+            {% assign date = startYear | append: ' - ' | append: endYear %}
+          {% endif %}
 
-        <div class="cv-card-body">
-          <div class="cv-card-header">
-            {% if entry.institution %}
-              <div class="cv-card-title">
-                {% if entry.url %}
-                  <a href="{{ entry.url }}" target="_blank" rel="noopener">{{ entry.institution }}</a>
-                {% else %}
-                  {{ entry.institution }}
-                {% endif %}
-              </div>
-            {% endif %}
-          </div>
+          <table class="table-cv">
+            <tbody>
 
-          <div class="cv-card-meta">
-            {% if study_type != '' %}<strong>{{ study_type }}</strong>{% endif %}
-            {% if study_type != '' and entry.area %} · {% endif %}
-            {% if entry.area %}<em>{{ entry.area }}</em>{% endif %}
-            {% if entry.score %} · GPA: {{ entry.score }}{% endif %}
-          </div>
+              {% if date %}
+              <tr>
+                <td>
+                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width:75px">
+                    {{ date }}
+                  </span>
+                </td>
+              </tr>
+              {% endif %}
 
-          <div class="cv-card-submeta">
-            {% if entry.location %}{{ entry.location }}{% endif %}
-            {% if entry.location and date != '' %} · {% endif %}
-            {% if date != '' %}{{ date }}{% endif %}
-          </div>
+              {% if entry.location %}
+              <tr>
+                <td>
+                  <p class="location">
+                    <i class="fa-solid fa-location-dot iconlocation"></i>
+                    {{ entry.location }}
+                  </p>
+                </td>
+              </tr>
+              {% endif %}
+
+              {% if entry.logo %}
+              <tr>
+                <td style="padding-top:8px;">
+                  <img 
+                    src="{{ entry.logo | relative_url }}" 
+                    alt="logo"
+                    style="
+                      width:40px;
+                      height:40px;
+                      object-fit:contain;
+                      border-radius:6px;
+                      display:block;
+                      margin:auto;
+                    "
+                  />
+                </td>
+              </tr>
+              {% endif %}
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+
+          {% capture study_type %}
+            {% if entry.studyType %}{{ entry.studyType }}{% elsif entry.degree %}{{ entry.degree }}{% endif %}
+          {% endcapture %}
+
+          {% if entry.url %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">
+              <a href="{{ entry.url }}" target="_blank">{{ study_type }}</a>
+            </h6>
+          {% elsif study_type != '' %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ study_type }}</h6>
+          {% endif %}
+
+          {% if entry.institution %}
+            <h6 class="ml-1 ml-md-4" style="font-size:0.95rem">{{ entry.institution }}</h6>
+          {% endif %}
+
+          {% if entry.area %}
+            <h6 class="ml-1 ml-md-4" style="font-size:0.95rem; font-style:italic">{{ entry.area }}</h6>
+          {% endif %}
+
+          {% if entry.score %}
+            <p class="ml-1 ml-md-4 mb-1"><strong>GPA:</strong> {{ entry.score }}</p>
+          {% endif %}
 
           {% if entry.department %}
-            <div class="cv-card-line"><strong>Department/Program:</strong> {{ entry.department }}</div>
-          {% endif %}
-          {% if entry.scientific_project %}
-            <div class="cv-card-line"><strong>Scientific project:</strong> {{ entry.scientific_project }}</div>
-          {% endif %}
-          {% if entry.minor_projects %}
-            <div class="cv-card-line"><strong>Minor projects:</strong> {{ entry.minor_projects }}</div>
-          {% endif %}
-          {% if entry.summary %}
-            <div class="cv-card-summary">{{ entry.summary }}</div>
+            <p class="ml-1 ml-md-4 mb-1"><strong>Department/Program:</strong> {{ entry.department }}</p>
           {% endif %}
 
-          {% if entry.courses or entry.highlights %}
-            <ul class="cv-card-bullets">
-              {% for item in entry.courses %}
-                <li>{{ item }}</li>
-              {% endfor %}
-              {% for item in entry.highlights %}
-                <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-              {% endfor %}
-            </ul>
+          {% if entry.scientific_project %}
+            <p class="ml-1 ml-md-4 mb-1"><strong>Scientific project:</strong> {{ entry.scientific_project }}</p>
           {% endif %}
+
+          {% if entry.minor_projects %}
+            <p class="ml-1 ml-md-4 mb-1"><strong>Minor projects:</strong> {{ entry.minor_projects }}</p>
+          {% endif %}
+
+          {% if entry.summary %}
+            <p class="ml-1 ml-md-4 mb-1">{{ entry.summary }}</p>
+          {% endif %}
+
         </div>
+
       </div>
     </li>
   {% endfor %}
