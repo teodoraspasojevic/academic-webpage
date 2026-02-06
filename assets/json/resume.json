@@ -76,7 +76,10 @@
       "startDate": "2023-10-01",
       "endDate": "2025-12-04",
       "score": "1.4",
-      "summary": "• Department: Electromobility-ACES with majors in AI, Autonomous Driving and Communication. \n • Scientific Project: Uncertainty Estimation for Video Generative models. \n • Minor Projects: Vision Transformer, LSTM, RNN implementation; Imitation Learning. \n • Courses: CV, RL, Advanced DL (including advanced concepts as Explainability, Uncertainty) etc."
+      "department": "Electromobility-ACES with majors in AI, Autonomous Driving and Communication",
+      "scientific_project", "Uncertainty Estimation for Video Generative models",
+      "minor_projects", "Vision Transformer, LSTM, RNN implementation; Imitation Learning",
+      "summary": "My master's focused on CV, Advanced DL (including advanced concepts as Explainability, Uncertainty), RL, and gaining research experience."
     },
     {
       "institution": "University of Belgrade, School of Electrical Engineering",
@@ -87,7 +90,9 @@
       "startDate": "2019-10-01",
       "endDate": "2023-07-06",
       "score": "9.33/10.00 (equivalent to 1.5 in German grading system)",
-      "summary": "Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing. \n Department: Signals and Systems"
+      "department": "Signals and Systems",
+      "activities": "Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23",
+      "summary": "My bachelor's focused in AI, ML, Computer Science, Mathematics, and Signal Processing.s"
     }
   ],
   "scholarships": [
