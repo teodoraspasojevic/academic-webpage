@@ -77,8 +77,8 @@
       "endDate": "2025-12-04",
       "score": "1.4",
       "department": "Electromobility-ACES with majors in AI, Autonomous Driving and Communication",
-      "scientific_project", "Uncertainty Estimation for Video Generative models",
-      "minor_projects", "Vision Transformer, LSTM, RNN implementation; Imitation Learning",
+      "scientific_project": "Uncertainty Estimation for Video Generative models",
+      "minor_projects": "Vision Transformer, LSTM, RNN implementation; Imitation Learning",
       "summary": "My master's focused on CV, Advanced DL (including advanced concepts as Explainability, Uncertainty), RL, and gaining research experience."
     },
     {
@@ -108,12 +108,12 @@
       "awarder": "Ministry of Education, Science and Technological Development of Republic of Serbia",
       "summary": ""
     }
-  ]
+  ],
   "publications": [
     {
       "name": "LSA: Localized Semantic Alignment for Enhancing Temporal Consistency in Traffic Video Generation",
       "publisher": "IEEE Intelligent Vehicles (IV) 2026",
-      "releaseDate": "2026-15-01",
+      "releaseDate": "2026-01-15",
       "url": "https://teodoraspasojevic.github.io/lsa-project-page/",
       "summary": "Localized Semantic Alignment (LSA) improves temporal consistency in diffusion-based traffic video generation within single fine-tuning epoch and with no inference-time control signals."
     }
