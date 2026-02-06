@@ -21,7 +21,7 @@
       "location": "Stuttgart, Germany",
       "startDate": "2025-05-12",
       "endDate": "2025-11-11",
-      "summary": "• I have worked on my thesis on topic of Consistency-aware Video Generation: Dynamic, Semantic, and Geometric Constraints for Improved Temporal Coherence. In the thesis, I enhance temporal consistency of video generation (VG) in an end-to-end multimodal manner. I propose a novel framework for fine-tuning pretrained VG models (specifically Stable Video Diffusion), while keeping the inference control-free. The framework enforces dynamic, semantic, and depth consistency using a set of losses. These losses compare outputs of off-the-shelf object detection (DN-DETR), feature extraction (DINO), and depth estimation models between ground-truth and generated videos. For this work, I have designed distributed training and evaluation pipelines deployed on GCP with Flyte, using support of accelerate library. \n • Additionally, I have contributed to a scientific publication accepted to the IEEE IV 2026 conference, based on this thesis, conducting all the experiments and contributing to the manuscript preparation."
+      "summary": "• I have worked on my thesis on topic of Consistency-aware Video Generation: Dynamic, Semantic, and Geometric Constraints for Improved Temporal Coherence. In the thesis, I enhance temporal consistency of video generation (VG) in an end-to-end multimodal manner. I propose a novel framework for fine-tuning pretrained VG models (specifically Stable Video Diffusion), while keeping the inference control-free. The framework enforces dynamic, semantic, and depth consistency using a set of losses. These losses compare outputs of off-the-shelf object detection (DN-DETR), feature extraction (DINO), sematic segmentation (SAM), and depth estimation (DepthAnything) models between ground-truth and generated videos. For this work, I have designed distributed training and evaluation pipelines deployed on GCP with Flyte, using support of accelerate library. \n • Additionally, I have contributed to a scientific publication accepted to the IEEE IV 2026 conference, based on this thesis, conducting all the experiments and contributing to the manuscript preparation."
     },
     {
       "name": "Mercedes-Benz AG, Autonomous Driving R&D Team",
@@ -29,7 +29,7 @@
       "location": "Stuttgart, Germany",
       "startDate": "2024-11-15",
       "endDate": "2025-04-15",
-      "summary": "• During this research-driven internship, I have researched the fields of diﬀusion-based video generative and world models (WM) and conditioning mechanisms (ControlNet). This research contributed to a master’s thesis proposal. \n • I have experiments with models: Stable Video Diffusion (SVD), Vista WM, Cosmos WM and Ctrl-V (SVD with ControlNet). \n • Used infrastructure: Google’s cloud computing service (GCP) with Flyte and Weights&Biases support. I have developed a tutorial on GCP and workflow setup for GCP, now used by the team. \n • Participated and presented my work in team research sync meetings."
+      "summary": "• During this research-driven internship, I have researched the fields of diﬀusion-based video generative and world models (WM) and conditioning mechanisms (ControlNet). This research contributed to a master’s thesis proposal. \n • I have experimented with models: Stable Video Diffusion (SVD), Vista WM, Cosmos WM and Ctrl-V (SVD with ControlNet). \n • Used infrastructure: Google’s cloud computing service (GCP) with Flyte and Weights&Biases support. I have developed a tutorial on GCP and workflow setup for GCP, now used by the team. \n • Participated and presented my work in team research sync meetings."
     },
     {
       "name": "Friedrich-Alexander University Erlangen-Nuremberg",
@@ -37,7 +37,7 @@
       "location": "Erlangen, Germany",
       "startDate": "2024-06-01",
       "endDate": "2024-11-14",
-      "summary": "Implemented a new initialization algorithm for Bilinear Expectation Propagation (EP) algorithm, part of a Cell-Free 6G Information Theory Project. New initialization lead to accuracy increase of the EP algorithm. Experiments were run on a high-computing cluster.Implemented a new initialization algorithm for Bilinear Expectation Propagation (EP) algorithm, part of a "Cell-Free 6G" Information Theory Project. New initialization lead to accuracy increase of the EP algorithm. Experiments were run on a high-computing cluster."
+      "summary": "Implemented a new initialization algorithm for Bilinear Expectation Propagation (EP) algorithm, part of a Cell-Free 6G Information Theory Project. New initialization lead to accuracy increase of the EP algorithm. Experiments were run on a high-computing cluster."
     },
     {
       "name": "TTTech Auto",
@@ -45,7 +45,7 @@
       "location": "Belgrade, Serbia",
       "startDate": "2023-03-01",
       "endDate": "2023-08-31",
-      "summary": "Completed my bachelor thesis on the topic of Real-time Traffic Light Detection in the CARLA Simulator. The work included usage of signal processing tools with at the time SOTA object detection model (YOLO) with real-time capabilities, and integrating it to CARLA simulator."
+      "summary": "Completed my bachelor thesis on the topic of Real-time Traffic Light Detection in the CARLA Simulator. The work included usage of signal processing tools with at the time SOTA object detection model (YOLO) with real-time capabilities, and integrating it into CARLA simulator."
     },
     {
       "name": "University of Belgrade, School of Electrical Engineering",
@@ -81,12 +81,13 @@
     {
       "institution": "University of Belgrade, School of Electrical Engineering",
       "location": "Belgrade, Serbia",
+      "url": "https://www.etf.bg.ac.rs/en",
       "area": "Electrical Engineering and Computing",
       "studyType": "Bachelor's",
       "startDate": "2019-10-01",
       "endDate": "2023-07-06",
-      "score": "9.33/10.00 ()",
-      "summary": "Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing.Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing.\n Department: Signals and Systems"
+      "score": "9.33/10.00 (equivalent to 1.5 in German grading system)",
+      "summary": "Activities and societies: Undergraduate Teaching Assistant on courses Signals and Systems and Automatic Control Systems 2021-23; focused in AI, ML, Computer Science, Mathematics, Signal Processing. \n Department: Signals and Systems"
     }
   ],
   "scholarships": [
@@ -114,49 +115,24 @@
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "Professional Profficiency",
       "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
     },
     {
-      "name": "Professor Jane Smith",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
-    }
-  ],
-  "projects": [
+      "language": "German",
+      "fluency": "Basic Level",
+      "icon": ""
+    },
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01"
+      "language": "Serbian",
+      "fluency": "Native Speaker",
+      "icon": ""
+    },
+    {
+      "language": "Franch",
+      "fluency": "Basic Level",
+      "icon": ""
     }
   ]
 }
